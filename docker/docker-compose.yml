@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: ["--reload"]
+    environment: 
+      - LOG_LEVEL=debug
+      - HOST=0.0.0.0
+    volumes:
+      - ./src:/app
+    ports:
+      - "8000:8000"
+      - "8080:8080"
